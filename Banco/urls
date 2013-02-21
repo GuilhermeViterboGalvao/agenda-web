@@ -4,6 +4,7 @@ sistema/listarcontatos.do?pagina=2
 sistema/listarcontatos.do?pagina=1&qtContatosPagina=3
 sistema/buscarcontatos.do?nome=a
 
+
 sistema/cadastrarcontato.do?nome=Teste123
 sistema/cadastraremail.do?idContato=22&email=teste123@gmail.com
 sistema/cadastrartelefone.do?idContato=22&idTipoTelefone=2&numero=(13)3322-5566
