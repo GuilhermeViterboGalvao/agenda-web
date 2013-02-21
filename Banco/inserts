@@ -1,0 +1,200 @@
+use Agenda;
+
+--Insert Usuários
+insert into Usuario (nmLogin, nmSenha, nmUsuario, nmEmail) 
+values ('usuario1', '123', 'Usuario 1', 'usuario1@gmail.com');
+insert into Usuario (nmLogin, nmSenha, nmUsuario, nmEmail) 
+values ('usuario2', '456', 'Usuario 2', 'usuario2@gmail.com');
+
+--Insert TipoTelefone
+insert into TipoTelefone (nmTipoTelefone) values ('Residencial');
+insert into TipoTelefone (nmTipoTelefone) values ('Celular');
+insert into TipoTelefone (nmTipoTelefone) values ('Escritório');
+insert into TipoTelefone (nmTipoTelefone) values ('Fax');
+insert into TipoTelefone (nmTipoTelefone) values ('Trabalho');
+
+--Insert Contatos do Usuário1
+insert into Contato (nmContato, nmCaminhoFoto, nmLogin) 
+values ('Contato 1', '/imagens/usuario1/Contato1/imagem.jpg', 'usuario1');
+insert into Contato (nmContato, nmCaminhoFoto, nmLogin) 
+values ('Contato 2', '/imagens/usuario1/Contato2/imagem.jpg', 'usuario1');
+insert into Contato (nmContato, nmCaminhoFoto, nmLogin) 
+values ('Contato 3', '/imagens/usuario1/Contato3/imagem.jpg', 'usuario1');
+insert into Contato (nmContato, nmCaminhoFoto, nmLogin) 
+values ('Ana', '/imagens/usuario1/Ana/imagem.jpg', 'usuario1');
+insert into Contato (nmContato, nmCaminhoFoto, nmLogin) 
+values ('Bruno', '/imagens/usuario1/Bruno/imagem.jpg', 'usuario1');
+insert into Contato (nmContato, nmCaminhoFoto, nmLogin) 
+values ('Clara', '/imagens/usuario1/Clara/imagem.jpg', 'usuario1');
+insert into Contato (nmContato, nmCaminhoFoto, nmLogin) 
+values ('Daniel', '/imagens/usuario1/Daniel/imagem.jpg', 'usuario1');
+insert into Contato (nmContato, nmCaminhoFoto, nmLogin) 
+values ('Eliana', '/imagens/usuario1/Eliana/imagem.jpg', 'usuario1');
+insert into Contato (nmContato, nmCaminhoFoto, nmLogin) 
+values ('Fabio', '/imagens/usuario1/Fabio/imagem.jpg', 'usuario1');
+insert into Contato (nmContato, nmCaminhoFoto, nmLogin) 
+values ('Guilherme', '/imagens/usuario1/Guilherme/imagem.jpg', 'usuario1');
+
+--Insert Contatos do Usuário2
+insert into Contato (nmContato, nmCaminhoFoto, nmLogin) 
+values ('Contato 11', '', 'usuario2');
+insert into Contato (nmContato, nmCaminhoFoto, nmLogin) 
+values ('Contato 12', '', 'usuario2');
+insert into Contato (nmContato, nmCaminhoFoto, nmLogin) 
+values ('Contato 13', '', 'usuario2');
+
+--Insert Telefones Contato1
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('33225544', 1, 1);
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('22335544', 1, 2);
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('32325544', 1, 5);
+
+--Insert Telefones Contato2
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('78445596', 2, 5);
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('21458763', 2, 3);
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('42569874', 2, 4);
+
+--Insert Telefones Contato3
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('96345663', 3, 5);
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('35789416', 3, 3);
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('22556633', 3, 4);
+
+--Insert Telefones Ana
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('22558811', 4, 3);
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('13265478', 4, 3);
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('56987412', 4, 4);
+
+--Insert Telefones Bruno
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('55522266', 5, 3);
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('44455588', 5, 3);
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('99988844', 5, 4);
+
+--Insert Telefones Clara
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('99966655', 6, 3);
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('66633322', 6, 3);
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('23355547', 6, 4);
+
+--Insert Telefones Daniel
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('88856321', 7, 3);
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('16547896', 7, 3);
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('22335554', 7, 4);
+
+--Insert Telefones Eliana
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('96355547', 8, 3);
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('56321478', 8, 3);
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('55663388', 8, 4);
+
+--Insert Telefones Fabio
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('99966642', 9, 3);
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('22665588', 9, 3);
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('33654771', 9, 4);
+
+--Insert Telefones Guilherme
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('32652255', 10, 3);
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('21114478', 10, 3);
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('33655414', 10, 4);
+
+--Insert Telefones Contato11
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('89562312', 11, 1);
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('85966352', 11, 2);
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('14253647', 11, 2);
+
+--Insert Telefones Contato12
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('66352897', 12, 1);
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('85967412', 12, 2);
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('89562314', 12, 2);
+
+--Insert Telefones Contato13
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('58565459', 13, 3);
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('25262421', 13, 3);
+insert into Telefone (nmTelefone, cdContato, cdTipoTelefone)
+values ('36353934', 13, 4);
+
+--Insert Emails Contato1
+insert into Email(nmEmail, cdContato) values ('c1@hotmail.com', 1);
+insert into Email(nmEmail, cdContato) values ('c1@gmail.com', 1);
+
+--Insert Emails Contato2
+insert into Email(nmEmail, cdContato) values ('c2@hotmail.com', 2);
+insert into Email(nmEmail, cdContato) values ('c2@gmail.com', 2);
+
+--Insert Emails Contato3
+insert into Email(nmEmail, cdContato) values ('c3@hotmail.com', 3);
+insert into Email(nmEmail, cdContato) values ('c3@gmail.com', 3);
+
+--Insert Emails Ana
+insert into Email(nmEmail, cdContato) values ('ana@hotmail.com', 4);
+insert into Email(nmEmail, cdContato) values ('ana@gmail.com', 4);
+
+--Insert Emails Bruno
+insert into Email(nmEmail, cdContato) values ('bruno@hotmail.com', 5);
+insert into Email(nmEmail, cdContato) values ('bruno@gmail.com', 5);
+
+--Insert Emails Clara
+insert into Email(nmEmail, cdContato) values ('clara@hotmail.com', 6);
+insert into Email(nmEmail, cdContato) values ('clara@gmail.com', 6);
+
+--Insert Emails Daniel
+insert into Email(nmEmail, cdContato) values ('daniel@hotmail.com', 7);
+insert into Email(nmEmail, cdContato) values ('daniel@gmail.com', 7);
+
+--Insert Emails Eliana
+insert into Email(nmEmail, cdContato) values ('eliana@hotmail.com', 8);
+insert into Email(nmEmail, cdContato) values ('eliana@gmail.com', 8);
+
+--Insert Emails Fabio
+insert into Email(nmEmail, cdContato) values ('fabio@hotmail.com', 9);
+insert into Email(nmEmail, cdContato) values ('fabio@gmail.com', 9);
+
+--Insert Emails Guilherme
+insert into Email(nmEmail, cdContato) values ('guilherme@hotmail.com', 10);
+insert into Email(nmEmail, cdContato) values ('guilherme@gmail.com', 10);
+
+--Insert Emails Contato11
+insert into Email(nmEmail, cdContato) values ('c11@hotmail.com', 11);
+insert into Email(nmEmail, cdContato) values ('c11@gmail.com', 11);
+
+--Insert Emails Contato12
+insert into Email(nmEmail, cdContato) values ('c12@hotmail.com', 12);
+insert into Email(nmEmail, cdContato) values ('c12@gmail.com', 12);
+
+--Insert Emails Contato13
+insert into Email(nmEmail, cdContato) values ('c13@hotmail.com', 13);
+insert into Email(nmEmail, cdContato) values ('c13@gmail.com', 13);

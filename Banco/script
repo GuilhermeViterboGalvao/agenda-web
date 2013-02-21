@@ -1,0 +1,69 @@
+create database Agenda;
+
+use Agenda;
+
+create table Usuario(
+	nmLogin varchar(20) not null,
+	nmSenha varchar(20) not null,
+	nmUsuario varchar(50) not null,
+	nmEmail varchar(45) not null,
+
+	constraint pk_Usuario primary key(
+		nmLogin	
+	)
+);
+
+create table Contato(
+	cdContato int auto_increment not null,	
+	nmContato varchar(50) not null,
+	nmCaminhoFoto varchar(200),
+	nmLogin varchar(20) not null,
+
+	constraint pk_Usuario primary key(
+		cdContato
+	),
+
+	constraint fk_Contato_Usuario foreign key(
+		nmLogin
+	) references Usuario(nmLogin)
+);
+
+create table TipoTelefone(
+	cdTipoTelefone int auto_increment not null,
+	nmTipoTelefone varchar(20) not null,
+	
+	constraint pk_TipoTelefone primary key(
+		cdTipoTelefone
+	)
+);
+
+create table Telefone(
+	nmTelefone varchar(15) not null,	
+	cdContato int not null,
+	cdTipoTelefone int not null,
+
+	constraint pk_Telefone primary key(
+		nmTelefone	
+	),
+
+	constraint fk_Telefone_Contato foreign key(
+		cdContato
+	) references Contato(cdContato),
+
+	constraint fk_Telefone_TipoTelefone foreign key(
+		cdTipoTelefone
+	) references TipoTelefone(cdTipoTelefone)
+);
+
+create table Email(	
+	nmEmail varchar(100) not null,
+	cdContato int not null,
+
+	constraint pk_Email primary key(
+		nmEmail	
+	),
+
+	constraint fk_Email_Contato foreign key(
+		cdContato
+	) references Contato(cdContato)
+);
