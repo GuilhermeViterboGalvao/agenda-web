@@ -12,6 +12,7 @@ public class FabricaDeConexao {
 	public static Connection getConnection() throws SQLException {
 		try {
 			return DriverManager.getConnection(DATABASE_URL, DATABASE_USER, DATABASE_PASSWORD);
+			
 		} catch(SQLException e) {
 			throw e;
 		}
